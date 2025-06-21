@@ -32,11 +32,11 @@ import kotlinx.serialization.Serializable
 internal data class Operator(
     @SerialName("name") val name: String,
     @SerialName("email") val email: List<String>,
-    @SerialName("logs") val logs: List<Log>
+    @SerialName("logs") val logs: List<Log> = emptyList(),
+    @SerialName("tiled_logs") val tiledLogs: List<Log> = emptyList()
 ) {
     init {
         require(name.isNotEmpty())
         require(email.isNotEmpty())
-        require(logs.isNotEmpty())
     }
 }
