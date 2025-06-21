@@ -27,6 +27,7 @@ import kotlinx.serialization.Serializable
  * @property name Name of this log operator
  * @property email CT log operator email addresses. The log operator can be contacted using any of these email addresses. (format: email)
  * @property logs Details of Certificate Transparency logs run by this operator.
+ * @property titleLogs details of tiled certificate transparency logs run by this opeator.
  */
 @Serializable
 internal data class Operator(
